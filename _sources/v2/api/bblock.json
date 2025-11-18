@@ -1,0 +1,39 @@
+{
+  "name": "OGC API - Processes: Part 2 - Deploy, Replace, Undeploy",
+  "abstract": "API definition for OGC API - Processes Part 2 extending Part 1 with process lifecycle management",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-18T21:00:00Z",
+  "dateOfLastChange": "2025-11-18",
+  "itemClass": "api",
+  "register": "ogc-api-processes-part2",
+  "version": "0.1",
+  "sources": [
+    {
+      "title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy",
+      "link": "http://docs.ogc.org/DRAFTS/20-044.html"
+    }
+  ],
+  "tags": [
+    "ogc",
+    "processes",
+    "deploy",
+    "replace",
+    "undeploy",
+    "part2",
+    "api"
+  ],
+  "highlighted": true,
+  "dependsOn": [
+    "ogc.api.processes.v2.schemas.ogcapppkg",
+    "ogc.api.processes.v2.schemas.ogcapppkg-cwl",
+    "ogc.api.processes.v2.responses.deploySuccess",
+    "ogc.api.processes.v2.responses.replaceSuccess",
+    "ogc.api.processes.v2.responses.undeploySuccess",
+    "ogc.api.processes.v2.responses.duplicateProcess",
+    "ogc.api.processes.v2.responses.immutableProcess",
+    "ogc.api.processes.v1.parameters.processIdPathParam",
+    "ogc.api.processes.v1.responses.InvalidParameter",
+    "ogc.api.processes.v1.responses.NotFound",
+    "ogc.api.processes.v1.responses.ServerError"
+  ]
+}

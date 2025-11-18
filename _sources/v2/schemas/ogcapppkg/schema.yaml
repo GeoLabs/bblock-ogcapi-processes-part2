@@ -1,0 +1,16 @@
+type: object
+required:
+  - executionUnit
+properties:
+  processDescription:
+    type: object
+    required: 
+      - process
+    properties:
+      process:
+        $ref: bblocks://ogc.api.processes.v1.schemas.process
+  executionUnit:
+    oneOf:
+      - $ref: bblocks://ogc.api.processes.v2.schemas.executionUnit
+      - $ref: bblocks://ogc.api.processes.v1.schemas.link
+      - $ref: bblocks://ogc.api.processes.v1.schemas.qualifiedInputValue

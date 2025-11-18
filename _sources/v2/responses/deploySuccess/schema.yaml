@@ -1,0 +1,23 @@
+type: object
+description: Successful process deployment response
+properties:
+  status:
+    type: string
+    enum:
+      - success
+  message:
+    type: string
+    description: Success message
+  processId:
+    type: string
+    description: ID of the deployed process
+  processSummary:
+    $ref: 'bblocks://ogc.api.processes.v2.schemas.processSummaryDRU'
+  links:
+    type: array
+    items:
+      $ref: 'bblocks://ogc.api.processes.v1.schemas.link'
+required:
+  - status
+  - processId
+  - processSummary

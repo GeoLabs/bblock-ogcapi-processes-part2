@@ -1,0 +1,24 @@
+{
+  "name": "OGC Application Package with CWL",
+  "abstract": "OGC Application Package using Common Workflow Language (CWL) for process description and execution",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-18T22:00:00Z",
+  "dateOfLastChange": "2025-11-18",
+  "register": "ogc-api-processes-part2",
+  "version": "0.1",
+  "sources": [
+    {
+      "title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy - CWL Encoding",
+      "link": "https://docs.ogc.org/DRAFTS/20-044.html#_2016252b-e710-0f32-a102-1c4635e52f7c"
+    }
+  ],
+  "tags": [
+    "ogc",
+    "processes",
+    "cwl",
+    "workflow",
+    "application-package",
+    "part2"
+  ],
+  "itemClass": "schema"
+}

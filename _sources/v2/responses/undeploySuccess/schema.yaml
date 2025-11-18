@@ -1,0 +1,17 @@
+type: object
+description: Successful process undeployment response
+properties:
+  status:
+    type: string
+    enum:
+      - success
+  message:
+    type: string
+    description: Success message indicating process was undeployed
+  processId:
+    type: string
+    description: ID of the undeployed process
+required:
+  - status
+  - processId
+  - message

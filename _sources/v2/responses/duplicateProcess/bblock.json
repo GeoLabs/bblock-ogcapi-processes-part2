@@ -1,0 +1,29 @@
+{
+  "itemIdentifier": "ogc.api.processes.v2.responses.duplicateProcess",
+  "name": "Duplicate Process Error Response",
+  "abstract": "Error response when attempting to deploy a process that already exists",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-18T00:00:00Z",
+  "itemClass": "response",
+  "register": "ogc-building-block-register",
+  "version": "0.1",
+  "dateOfLastChange": "2025-11-18",
+  "sources": [
+    {
+      "title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy (Draft)",
+      "link": "https://docs.ogc.org/DRAFTS/20-044.html"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "ogcapi-processes",
+    "processes",
+    "part2",
+    "deploy",
+    "error",
+    "response"
+  ],
+  "dependsOn": [
+    "ogc.api.processes.v1.schemas.exception"
+  ]
+}

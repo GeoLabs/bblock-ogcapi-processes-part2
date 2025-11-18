@@ -1,0 +1,121 @@
+openapi: 3.0.3
+info:
+  title: "OGC API - Processes - Part 2: Deploy, Replace, Undeploy"
+  version: 2.0.0
+  description: |-
+    This document is an API definition for OGC API - Processes - Part 2: Deploy, Replace, Undeploy (DRU).
+    This specification extends OGC API - Processes - Part 1: Core with process lifecycle management capabilities,
+    allowing clients to deploy, replace, and undeploy processes dynamically.
+  contact:
+    name: "Open Geospatial Consortium (OGC)"
+    email: standards-team@ogc.org
+    url: 'https://www.ogc.org/contacts'
+  license:
+    name: OGC license
+    url: "http://www.ogc.org/legal/"
+paths:
+  /processes:
+    post:
+      summary: Deploy a new process
+      description: >-
+        Deploy a new process to the server using an OGC Application Package.
+        The process will be added to the list of available processes and can be executed.
+        
+        Supports both standard OGC Application Package format and CWL encoding.
+        
+        For more information, see Section 7 of OGC API - Processes - Part 2.
+      operationId: deployProcess
+      tags:
+        - Deploy
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "bblocks://ogc.api.processes.v2.schemas.ogcapppkg"
+          application/cwl+json:
+            schema:
+              $ref: "bblocks://ogc.api.processes.v2.schemas.ogcapppkg-cwl"
+          application/cwl+yaml:
+            schema:
+              $ref: "bblocks://ogc.api.processes.v2.schemas.ogcapppkg-cwl"
+      responses:
+        201:
+          description: Process successfully deployed
+          content:
+            application/json:
+              schema:
+                $ref: "bblocks://ogc.api.processes.v2.responses.deploySuccess"
+        400:
+          $ref: "bblocks://ogc.api.processes.v1.responses.InvalidParameter"
+        409:
+          $ref: "bblocks://ogc.api.processes.v2.responses.duplicateProcess"
+        500:
+          $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"
+  /processes/{processId}:
+    put:
+      summary: Replace an existing process
+      description: >-
+        Replace an existing process with a new version using an OGC Application Package.
+        The existing process will be updated with the new definition.
+        
+        Supports both standard OGC Application Package format and CWL encoding.
+        
+        For more information, see Section 8 of OGC API - Processes - Part 2.
+      operationId: replaceProcess
+      tags:
+        - Replace
+      parameters:
+        - $ref: "bblocks://ogc.api.processes.v1.parameters.processIdPathParam"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "bblocks://ogc.api.processes.v2.schemas.ogcapppkg"
+          application/cwl+json:
+            schema:
+              $ref: "bblocks://ogc.api.processes.v2.schemas.ogcapppkg-cwl"
+          application/cwl+yaml:
+            schema:
+              $ref: "bblocks://ogc.api.processes.v2.schemas.ogcapppkg-cwl"
+      responses:
+        200:
+          description: Process successfully replaced
+          content:
+            application/json:
+              schema:
+                $ref: "bblocks://ogc.api.processes.v2.responses.replaceSuccess"
+        404:
+          $ref: "bblocks://ogc.api.processes.v1.responses.NotFound"
+        400:
+          $ref: "bblocks://ogc.api.processes.v1.responses.InvalidParameter"
+        403:
+          $ref: "bblocks://ogc.api.processes.v2.responses.immutableProcess"
+        500:
+          $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"
+    delete:
+      summary: Undeploy a process
+      description: >-
+        Remove a deployed process from the server. The process will no longer be available
+        for execution. Running jobs may be affected based on server implementation.
+        
+        For more information, see Section 9 of OGC API - Processes - Part 2.
+      operationId: undeployProcess
+      tags:
+        - Undeploy
+      parameters:
+        - $ref: "bblocks://ogc.api.processes.v1.parameters.processIdPathParam"
+      responses:
+        200:
+          description: Process successfully undeployed
+          content:
+            application/json:
+              schema:
+                $ref: "bblocks://ogc.api.processes.v2.responses.undeploySuccess"
+        404:
+          $ref: "bblocks://ogc.api.processes.v1.responses.NotFound"
+        403:
+          $ref: "bblocks://ogc.api.processes.v2.responses.immutableProcess"
+        500:
+          $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"

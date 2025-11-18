@@ -1,0 +1,25 @@
+{
+  "name": "Execution Unit schema",
+  "abstract": "Schema for execution units (Docker, OCI containers) for process deployment",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-18T21:00:00Z",
+  "dateOfLastChange": "2025-11-18",
+  "register": "ogc-api-processes-part2",
+  "version": "0.1",
+  "sources": [
+    {
+      "title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy",
+      "link": "http://docs.ogc.org/DRAFTS/20-044.html"
+    }
+  ],
+  "tags": [
+    "ogc",
+    "processes",
+    "docker",
+    "oci", 
+    "execution",
+    "part2",
+    "schema"
+  ],
+  "itemClass": "schema"
+}

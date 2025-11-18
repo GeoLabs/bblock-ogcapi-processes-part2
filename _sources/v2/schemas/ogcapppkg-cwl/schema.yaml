@@ -1,0 +1,17 @@
+allOf:
+  - $ref: bblocks://ogc.api.processes.v2.schemas.ogcapppkg
+  - type: object
+    properties:
+      processDescription:
+        type: object
+        properties:
+          process:
+            oneOf:
+              - $ref: bblocks://ogc.api.processes.v1.schemas.process
+              - $ref: bblocks://ogc.cwl.v1_2_1.CWL
+      executionUnit:
+        oneOf:
+          - $ref: bblocks://ogc.api.processes.v2.schemas.executionUnit
+          - $ref: bblocks://ogc.cwl.v1_2_1.CWL
+          - $ref: bblocks://ogc.api.processes.v1.schemas.link
+          - $ref: bblocks://ogc.api.processes.v1.schemas.qualifiedInputValue

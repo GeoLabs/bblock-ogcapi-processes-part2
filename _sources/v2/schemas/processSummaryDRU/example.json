@@ -1,0 +1,17 @@
+{
+  "id": "custom-classifier",
+  "title": "Custom Land Cover Classifier", 
+  "description": "User-deployed classification algorithm",
+  "version": "2.0.0",
+  "jobControlOptions": ["async-execute"],
+  "outputTransmission": ["reference"],
+  "keywords": ["classification", "machine-learning"],
+  "links": [
+    {
+      "href": "https://api.example.org/processes/custom-classifier",
+      "rel": "self",
+      "type": "application/json"
+    }
+  ],
+  "mutable": true
+}

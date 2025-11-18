@@ -1,0 +1,14 @@
+{
+  "type": "docker",
+  "image": "geolabs/geospatial-processor:2.1.0",
+  "deployment": "local",
+  "config": {
+    "cpuMin": 2,
+    "cpuMax": 8,
+    "memoryMin": 4,
+    "memoryMax": 16,
+    "storageTempMin": 10,
+    "storageOutputsMin": 20,
+    "jobTimeout": 7200
+  }
+}

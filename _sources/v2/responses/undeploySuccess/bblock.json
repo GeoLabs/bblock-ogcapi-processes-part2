@@ -1,0 +1,24 @@
+{
+  "name": "Undeploy Success Response",
+  "abstract": "Response schema for successful process undeployment operations",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-18T21:00:00Z",
+  "dateOfLastChange": "2025-11-18",
+  "register": "ogc-api-processes-part2",
+  "version": "0.1",
+  "sources": [
+    {
+      "title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy",
+      "link": "http://docs.ogc.org/DRAFTS/20-044.html"
+    }
+  ],
+  "tags": [
+    "ogc",
+    "processes",
+    "undeploy",
+    "response",
+    "success",
+    "part2"
+  ],
+  "itemClass": "response"
+}

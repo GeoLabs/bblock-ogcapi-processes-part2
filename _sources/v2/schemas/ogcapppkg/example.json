@@ -1,0 +1,49 @@
+{
+  "processDescription": {
+    "process": {
+      "id": "ndvi-calculator",
+      "title": "NDVI Calculator",
+      "description": "Calculate Normalized Difference Vegetation Index from multispectral imagery",
+      "version": "1.0.0",
+      "inputs": {
+        "red_band": {
+          "title": "Red Band",
+          "description": "Red spectral band input",
+          "schema": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "nir_band": {
+          "title": "Near-Infrared Band",
+          "description": "Near-infrared spectral band input", 
+          "schema": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
+      "outputs": {
+        "ndvi_result": {
+          "title": "NDVI Result",
+          "description": "Calculated NDVI image",
+          "schema": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    }
+  },
+  "executionUnit": {
+    "type": "docker",
+    "image": "geolabs/ndvi-calculator:1.0",
+    "deployment": "local",
+    "config": {
+      "cpuMin": 1,
+      "cpuMax": 2,
+      "memoryMin": 1,
+      "memoryMax": 4
+    }
+  }
+}
