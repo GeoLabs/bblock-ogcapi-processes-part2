@@ -27,6 +27,8 @@ paths:
       operationId: deployProcess
       tags:
         - Deploy
+      parameters:
+        - $ref: "bblocks://ogc.api.processes.v2.parameters.w"
       requestBody:
         required: true
         content:
@@ -53,6 +55,38 @@ paths:
         500:
           $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"
   /processes/{processId}:
+    get:
+      summary: Retrieve the deployment package of a process
+      description: >-
+        Access the formal description (OGC Application Package or CWL document) that was used 
+        to deploy a process. This allows retrieving the executable definition of a deployed process.
+        
+        For more information, see Section 10 of OGC API - Processes - Part 2.
+      operationId: getPackage
+      tags:
+        - Package
+      parameters:
+        - $ref: "bblocks://ogc.api.processes.v1.parameters.processIdPathParam"
+      responses:
+        200:
+          description: The deployment package of the process
+          content:
+            application/json:
+              schema:
+                $ref: "bblocks://ogc.api.processes.v2.schemas.ogcapppkg"
+            application/cwl:
+              schema:
+                $ref: "bblocks://ogc.api.processes.v2.schemas.ogcapppkg-cwl"
+            application/cwl+json:
+              schema:
+                $ref: "bblocks://ogc.api.processes.v2.schemas.ogcapppkg-cwl"
+            application/cwl+yaml:
+              schema:
+                $ref: "bblocks://ogc.api.processes.v2.schemas.ogcapppkg-cwl"
+        404:
+          $ref: "bblocks://ogc.api.processes.v1.responses.NotFound"
+        500:
+          $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"
     put:
       summary: Replace an existing process
       description: >-
@@ -67,6 +101,7 @@ paths:
         - Replace
       parameters:
         - $ref: "bblocks://ogc.api.processes.v1.parameters.processIdPathParam"
+        - $ref: "bblocks://ogc.api.processes.v2.parameters.w"
       requestBody:
         required: true
         content:

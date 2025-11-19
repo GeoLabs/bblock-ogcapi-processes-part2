@@ -1,61 +1,80 @@
-# OGC Application Package with CWL Support
+# CWL Encoding for Process Deployment
 
-This building block extends the OGC Application Package to support Common Workflow Language (CWL) as an encoding format for process descriptions and execution units.
+This building block defines the **CWL encoding** for Deploy and Replace operations in OGC API - Processes - Part 2.
+
+When using media types `application/cwl+json` or `application/cwl+yaml`, the **entire request body is a CWL document** - not an OGC Application Package wrapper.
 
 ## CWL Conformance Class
 
-According to the OGC API - Processes - Part 2 specification, the CWL conformance class enables:
+The CWL conformance class enables deploying processes using Common Workflow Language documents:
 
-- Using CWL documents as process descriptions
-- Deploying CWL workflows as executable processes
-- Supporting CWL CommandLineTool, Workflow, and ExpressionTool types
+- **CWL Workflows** - Multi-step workflow compositions
+- **CWL CommandLineTools** - Single command-line tool executions  
+- **CWL ExpressionTools** - JavaScript expression evaluations
 
-## Usage
+## Request Structure
 
-### Process Description with CWL
+### Content-Type Headers
 
-The `processDescription.process` property can reference or embed a CWL document:
+Use one of these media types for CWL-encoded deployments:
 
-- **CWL CommandLineTool**: Single command-line tool execution
-- **CWL Workflow**: Multi-step workflow composition
-- **CWL ExpressionTool**: JavaScript expression evaluation
-- **OGC Process**: Standard OGC API - Processes description
+- `application/cwl+yaml` - CWL in YAML format (recommended)
+- `application/cwl+json` - CWL in JSON format
 
-### Execution Unit with CWL
+### Request Body
 
-The `executionUnit` can be specified using:
+The body is **directly a CWL document**, for example:
 
-- **CWL Document**: Direct CWL CommandLineTool, Workflow, or ExpressionTool
-- **Container Image**: Docker/OCI container reference (standard approach)
-- **Link**: URL reference to external CWL or container
-- **Qualified Value**: Inline value with additional metadata
+```yaml
+cwlVersion: v1.0
+class: Workflow
+id: water_bodies
+label: Water bodies detection
+inputs:
+  aoi:
+    type: string
+    doc: Area of interest as bounding box
+  stac_items:
+    type: string[]
+    doc: List of Sentinel-2 STAC items
+outputs:
+  stac_catalog:
+    type: Directory
+    doc: Output STAC catalog
+steps:
+  # workflow steps...
+```
+
+## Example: Deploy Request
+
+```http
+POST /processes HTTP/1.1
+Host: api.example.org
+Content-Type: application/cwl+yaml
+
+cwlVersion: v1.0
+class: Workflow
+id: my-process
+# ... complete CWL document
+```
+
+## Comparison with JSON Encoding
+
+| Encoding | Content-Type | Request Body |
+|----------|-------------|--------------|
+| **JSON** (ogcapppkg) | `application/json` | OGC Application Package with `executionUnit` property |
+| **CWL** (this) | `application/cwl+yaml` or `application/cwl+json` | Direct CWL document |
 
 ## Benefits
 
-- **Workflow Portability**: CWL workflows are portable across different execution platforms
-- **Rich Composition**: Support for complex multi-step workflows with data flow
-- **Tool Reusability**: CWL tools can be composed into larger workflows
-- **Standard Compliance**: Aligns with established workflow standards in scientific computing
+- **Native CWL** - Use CWL documents directly without wrapping
+- **Tool Ecosystem** - Compatible with CWL tools and validators
+- **Workflow Portability** - CWL is portable across platforms
+- **Version Control** - CWL files can be versioned independently
 
-## Example
+## Real-World Example
 
-```yaml
-processDescription:
-  process:
-    class: CommandLineTool
-    baseCommand: echo
-    inputs:
-      message:
-        type: string
-        inputBinding:
-          position: 1
-    outputs:
-      output:
-        type: stdout
-executionUnit:
-  class: CommandLineTool
-  baseCommand: echo
-  requirements:
-    DockerRequirement:
-      dockerPull: alpine:latest
-```
+The example for this building block uses a complete Earth Observation workflow from the Terradue hands-on tutorial:
+[Water Bodies Detection Workflow](https://github.com/Terradue/ogc-eo-application-package-hands-on/releases/download/1.5.0/app-water-bodies-cloud-native.1.5.0.cwl)
+
+

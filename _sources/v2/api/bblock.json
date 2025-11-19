@@ -31,6 +31,7 @@
     "ogc.api.processes.v2.responses.undeploySuccess",
     "ogc.api.processes.v2.responses.duplicateProcess",
     "ogc.api.processes.v2.responses.immutableProcess",
+    "ogc.api.processes.v2.parameters.w",
     "ogc.api.processes.v1.parameters.processIdPathParam",
     "ogc.api.processes.v1.responses.InvalidParameter",
     "ogc.api.processes.v1.responses.NotFound",

@@ -20,5 +20,17 @@
     "part2",
     "schema"
   ],
-  "itemClass": "schema"
+  "itemClass": "schema",
+  "examples": [
+    {
+      "title": "OGC Application Package with CWL reference",
+      "content": "Example of an OGC Application Package that references an external CWL workflow via href. This demonstrates deployment of the Terradue water bodies detection workflow.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "example.json"
+        }
+      ]
+    }
+  ]
 }

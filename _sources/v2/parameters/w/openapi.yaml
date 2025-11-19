@@ -1,0 +1,9 @@
+name: w
+description: >-
+  Point to the workflow identifier for deploying a CWL document containing multiple workflow definitions.
+  When a CWL file defines multiple workflows (using $graph), this parameter specifies which workflow to use as the process entry point.
+in: query
+required: false
+schema:
+  type: string
+example: "main_workflow"

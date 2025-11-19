@@ -1,0 +1,24 @@
+{
+  "name": "Workflow Identifier Parameter (w)",
+  "abstract": "Query parameter to specify the workflow identifier when deploying a CWL document containing multiple workflow definitions",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-19T00:00:00Z",
+  "dateOfLastChange": "2025-11-19",
+  "register": "ogc-api-processes-part2",
+  "version": "0.1",
+  "sources": [
+    {
+      "title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy - w Parameter",
+      "link": "https://github.com/opengeospatial/ogcapi-processes/blob/master/openapi/parameters/processes-dru/w-param.yaml"
+    }
+  ],
+  "tags": [
+    "ogc",
+    "processes",
+    "cwl",
+    "parameter",
+    "workflow",
+    "part2"
+  ],
+  "itemClass": "parameter"
+}
