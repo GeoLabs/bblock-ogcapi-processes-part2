@@ -1,5 +1,5 @@
 {
-  "name": "OGC API - Processes: Part 2 - Deploy, Replace, Undeploy",
+  "name": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy",
   "abstract": "API definition for OGC API - Processes Part 2 extending Part 1 with process lifecycle management",
   "status": "under-development",
   "dateTimeAddition": "2025-11-18T21:00:00Z",
