@@ -12,7 +12,7 @@ properties:
     type: string
     description: ID of the deployed process
   processSummary:
-    $ref: 'bblocks://ogc.api.processes.v2.schemas.processSummaryDRU'
+    $ref: 'bblocks://ogc.api.processes.v2.schemas.staticIndicator'
   links:
     type: array
     items:

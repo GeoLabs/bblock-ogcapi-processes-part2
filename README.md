@@ -21,7 +21,7 @@ This repository provides the following building blocks:
 - **Execution Unit** (`ogc.api.processes.v2.schemas.executionUnit`) - Process execution unit definition
 - **OGC Application Package** (`ogc.api.processes.v2.schemas.ogcapppkg`) - Standard application package format
 - **OGC Application Package with CWL** (`ogc.api.processes.v2.schemas.ogcapppkg-cwl`) - CWL-enabled application package
-- **Process Summary DRU** (`ogc.api.processes.v2.schemas.processSummaryDRU`) - Extended process summary for DRU operations
+- **Process Summary DRU** (`ogc.api.processes.v2.schemas.staticIndicator`) - Extended process summary for DRU operations
 
 ### Responses
 - **Deploy Success** (`ogc.api.processes.v2.responses.deploySuccess`) - HTTP 201 response for successful deployment

@@ -6,10 +6,10 @@ description: |
   the core OGC API - Processes with process lifecycle management capabilities.
   
   Building blocks include schemas for:
-  - OGC Application Package (ogcapppkg) - Format for describing deployable processes
+  - OGC Application Package (ogcapppkg) - JSON format for describing deployable processes
+  - CWL Encoding for OGC Application Package (ogcapppkg-cwl) - CWL encoding of the OGC Application Package
   - Execution Unit (executionUnit) - Container execution specifications  
-  - Process Summary DRU (processSummaryDRU) - Process summary with mutability indicator
-  - Deploy Success Response (deploySuccess) - Response schema for deployment operations
+  - Static indicator schema (staticIndicator) - Process summary with mutability indicator
 
 identifier-prefix: ogc.api.processes.
 
