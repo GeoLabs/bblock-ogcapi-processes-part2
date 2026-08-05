@@ -1,0 +1,15 @@
+{
+  "name": "Execution unit base schema",
+  "abstract": "Base schema of a single execution unit (DRAFT): either a link to the execution unit, or an inline qualified value describing a container image, a CWL script, or another custom encoding.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-04T00:00:00Z",
+  "itemClass": "schema",
+  "version": "1.0.0",
+  "sources": [
+    {
+      "title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy",
+      "link": "https://docs.ogc.org/DRAFTS/20-044.html"
+    }
+  ],
+  "tags": ["ogcapi-processes", "schema", "draft"]
+}
