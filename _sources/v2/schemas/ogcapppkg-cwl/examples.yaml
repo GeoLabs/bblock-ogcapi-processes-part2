@@ -1,0 +1,8 @@
+- title: CWL Workflow - Water Bodies Detection
+  description: |
+    Complete CWL workflow for water bodies detection from Terradue. This is a
+    real-world example of a CWL document that can be deployed using the Deploy
+    operation.
+  snippets:
+    - language: yaml
+      ref: example.yaml

@@ -27,17 +27,5 @@
   "itemClass": "schema",
   "dependsOn": [
     "ogc.cwl.v1_2_1.CWL"
-  ],
-  "examples": [
-    {
-      "title": "CWL Workflow - Water Bodies Detection",
-      "content": "Complete CWL workflow for water bodies detection from Terradue. This is a real-world example of a CWL document that can be deployed using the Deploy operation.",
-      "snippets": [
-        {
-          "language": "yaml",
-          "ref": "example.yaml"
-        }
-      ]
-    }
   ]
 }

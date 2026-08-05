@@ -1,5 +1,5 @@
 {
-  "name": "Process Summary DRU schema",
+  "name": "Static indicator schema",
   "abstract": "Extension of Process Summary with mutability indicator for Deploy, Replace, Undeploy operations",
   "status": "under-development",
   "dateTimeAddition": "2025-11-18T21:00:00Z",
