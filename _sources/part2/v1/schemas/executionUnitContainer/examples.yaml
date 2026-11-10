@@ -1,0 +1,4 @@
+- title: Container payload from the draft
+  snippets:
+    - language: json
+      ref: tests/docker-example.json

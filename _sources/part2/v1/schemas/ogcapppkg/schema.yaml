@@ -1,0 +1,21 @@
+type: object
+required:
+  - executionUnit
+properties:
+  processDescription:
+    type: object
+    required: 
+      - process
+    properties:
+      process:
+        allOf:
+          - $ref: bblocks://ogc.api.processes.part1.v1.schemas.process
+          - $ref: bblocks://ogc.api.processes.part2.v1.schemas.staticIndicator
+  executionUnit:
+    anyOf:
+      - $ref: bblocks://ogc.api.processes.part2.v1.schemas.executionUnitValue
+      - allOf:
+          - $ref: bblocks://ogc.api.processes.part2.v1.schemas.executionUnit
+          - not:
+              required: [value]
+

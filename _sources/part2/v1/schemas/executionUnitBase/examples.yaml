@@ -1,0 +1,12 @@
+- title: Docker qualified value
+  snippets:
+    - language: json
+      ref: tests/docker.json
+- title: CWL link
+  snippets:
+    - language: json
+      ref: tests/link.json
+- title: Custom qualified value
+  snippets:
+    - language: json
+      ref: tests/custom-empty-object.json

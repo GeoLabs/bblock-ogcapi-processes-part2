@@ -1,0 +1,6 @@
+{
+  "executionUnit": [
+    {"type": "docker", "value": {"image": "example/echo:1"}},
+    {"href": "https://example.com/echo.cwl", "type": "application/cwl"}
+  ]
+}

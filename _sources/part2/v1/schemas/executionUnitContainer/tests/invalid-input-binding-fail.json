@@ -1,0 +1,10 @@
+{
+  "image": "mydocker/ndvi:latest",
+  "bindings": {
+    "inputBindings": {
+      "inputImage": {
+        "position": true
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Qualified execution unit value",
+  "abstract": "Part 2 support schema for a qualified execution payload of any JSON type. This is not the Part 1 qualifiedInputValue contract.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "schema",
+  "sources": [
+    {
+      "title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy (1.0 draft, OGC 20-044)",
+      "link": "https://docs.ogc.org/DRAFTS/20-044.html"
+    }
+  ],
+  "tags": ["ogcapi-processes", "schema", "draft", "support"]
+}

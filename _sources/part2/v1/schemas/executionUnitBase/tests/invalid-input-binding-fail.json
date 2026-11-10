@@ -1,0 +1,1 @@
+{"type": "docker", "value": {"image": "example/echo:1", "bindings": {"inputBindings": {"input": {"position": true}}}}}

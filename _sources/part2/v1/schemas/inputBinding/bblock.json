@@ -1,0 +1,11 @@
+{
+  "name": "Docker input binding",
+  "abstract": "How a process input is passed to a Docker execution unit (Requirement /req/docker/input-binding).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "dateOfLastChange": "2026-11-09",
+  "itemClass": "schema",
+  "version": "1.0.0",
+  "sources": [{"title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy", "link": "https://docs.ogc.org/DRAFTS/20-044.html"}],
+  "tags": ["ogcapi-processes", "schema", "draft"]
+}

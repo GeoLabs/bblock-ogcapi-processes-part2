@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "proc": "https://w3id.org/ogc/api/processes/",
+    "executionUnit": {
+      "@id": "proc:executionUnit",
+      "@type": "@json"
+    },
+    "processDescription": {
+      "@id": "proc:processDescription",
+      "@type": "@json"
+    }
+  }
+}

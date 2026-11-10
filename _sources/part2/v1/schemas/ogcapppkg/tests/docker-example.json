@@ -1,0 +1,29 @@
+{
+  "title": "NDVI application package",
+  "executionUnit": {
+    "type": "docker",
+    "value": {
+      "image": "mydocker/ndvi:latest",
+      "bindings": {
+        "inputBindings": {
+          "inputImage": {
+            "prefix": "inputsImages=",
+            "inputSeparator": ","
+          }
+        },
+        "outputBindings": {
+          "outputImage": {
+            "glob": "$(\"/outputs/ndvi_\" + inputs.inputImage.basename)"
+          }
+        }
+      },
+      "deployment": "local",
+      "config": {
+        "cpuMin": 2,
+        "cpuMax": 5,
+        "memoryMin": 1,
+        "memoryMax": 3
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "image": "mydocker/ndvi:latest",
+  "config": {
+    "cpuMin": 0
+  }
+}

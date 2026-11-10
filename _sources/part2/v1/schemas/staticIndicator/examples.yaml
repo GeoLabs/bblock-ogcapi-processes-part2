@@ -1,0 +1,8 @@
+- title: Process summary with explicit mutability
+  snippets:
+    - language: json
+      ref: example.json
+- title: Deploy response summary
+  snippets:
+    - language: json
+      ref: tests/deploy-success.json

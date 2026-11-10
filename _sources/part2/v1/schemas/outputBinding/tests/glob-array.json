@@ -1,0 +1,6 @@
+{
+  "glob": [
+    "/outputs/*.tif",
+    "/outputs/*.json"
+  ]
+}

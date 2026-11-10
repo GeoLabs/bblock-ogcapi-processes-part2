@@ -1,0 +1,5 @@
+- title: Legacy flat container execution unit
+  description: Existing public flat contract, not the canonical executionUnit property-value schema.
+  snippets:
+    - language: json
+      ref: example.json

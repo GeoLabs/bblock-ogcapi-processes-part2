@@ -1,0 +1,10 @@
+{
+  "image": "mydocker/ndvi:latest",
+  "bindings": {
+    "outputBindings": {
+      "outputImage": {
+        "glob": 3
+      }
+    }
+  }
+}

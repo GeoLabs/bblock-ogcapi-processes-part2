@@ -1,0 +1,4 @@
+- title: Input prefix and position
+  snippets:
+    - language: json
+      ref: tests/prefix-position.json

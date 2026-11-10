@@ -1,6 +1,7 @@
 name: OGC API - Processes - Part 2 Building Blocks
 abstract: |
-  Building blocks for OGC API - Processes - Part 2: Deploy, Replace, Undeploy (DRU)
+  Building blocks for OGC API - Processes - Part 2: Deploy, Replace, Undeploy (DRU),
+  with canonical single-or-array executionUnitValue and legacy flat executionUnit.
 description: |
   This repository contains building blocks for OGC API - Processes - Part 2 extending 
   the core OGC API - Processes with process lifecycle management capabilities.
@@ -8,7 +9,11 @@ description: |
   Building blocks include schemas for:
   - OGC Application Package (ogcapppkg) - JSON format for describing deployable processes
   - CWL Encoding for OGC Application Package (ogcapppkg-cwl) - CWL encoding of the OGC Application Package
-  - Execution Unit (executionUnit) - Container execution specifications  
+  - Execution Unit Property Value (executionUnitValue) - Canonical single unit or array
+  - Execution Unit Base (executionUnitBase) - Link or qualified container, CWL or custom unit
+  - Execution Unit Container (executionUnitContainer) - Nested container payload
+  - Input Binding (inputBinding) and Output Binding (outputBinding) - Container bindings
+  - Execution Unit (executionUnit) - Preserved legacy flat container contract
   - Static indicator schema (staticIndicator) - Process summary with mutability indicator
 
 identifier-prefix: ogc.api.processes.

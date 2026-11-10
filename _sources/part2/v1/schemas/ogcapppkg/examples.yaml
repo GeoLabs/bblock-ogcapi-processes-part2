@@ -1,0 +1,20 @@
+- title: OGC Application Package with CWL reference
+  description: |
+    Example of an OGC Application Package that references an external CWL
+    workflow via href. This demonstrates deployment of the Terradue water bodies
+    detection workflow.
+  snippets:
+    - language: json
+      ref: example.json
+- title: Canonical Docker application package
+  snippets:
+    - language: json
+      ref: tests/docker-example.json
+- title: Canonical execution unit array
+  snippets:
+    - language: json
+      ref: tests/array.json
+- title: Legacy flat container application package
+  snippets:
+    - language: json
+      ref: tests/legacy-flat.json

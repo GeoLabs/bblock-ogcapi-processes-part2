@@ -1,0 +1,7 @@
+# Part 2-owned support schema; arbitrary JSON payload, qualified by Part 1 v1 format.
+allOf:
+  - $ref: bblocks://ogc.api.processes.part1.v1.schemas.format
+  - type: object
+    required: [value]
+    properties:
+      value: {}

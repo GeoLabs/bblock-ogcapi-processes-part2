@@ -1,0 +1,11 @@
+{
+  "name": "Execution unit property value (single or array)",
+  "abstract": "Canonical value of an OGC Application Package executionUnit property: one executionUnitBase or an array. Distinct from the legacy flat executionUnit container schema.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "dateOfLastChange": "2026-11-09",
+  "itemClass": "schema",
+  "version": "1.0.0",
+  "sources": [{"title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy", "link": "https://docs.ogc.org/DRAFTS/20-044.html"}],
+  "tags": ["ogcapi-processes", "schema", "draft"]
+}

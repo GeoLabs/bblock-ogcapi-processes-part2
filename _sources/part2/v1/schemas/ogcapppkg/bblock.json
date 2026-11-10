@@ -1,0 +1,24 @@
+{
+  "name": "OGC Application Package schema",
+  "abstract": "OGC Application Package with canonical single-or-array executionUnitValue or a backwards-compatible legacy flat executionUnit",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-18T21:00:00Z",
+  "dateOfLastChange": "2026-11-09",
+  "register": "ogc-api-processes-part2",
+  "version": "0.2",
+  "sources": [
+    {
+      "title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy",
+      "link": "https://docs.ogc.org/DRAFTS/20-044.html"
+    }
+  ],
+  "tags": [
+    "ogc",
+    "processes",
+    "deploy", 
+    "application-package",
+    "part2",
+    "schema"
+  ],
+  "itemClass": "schema"
+}

@@ -1,0 +1,15 @@
+{
+  "title": "EchoProcess",
+  "version": "1.0.0",
+  "jobControlOptions": [
+    "sync-execute"
+  ],
+  "links": [
+    {
+      "href": "https://processing.example.org/processes/EchoProcess",
+      "rel": "self",
+      "type": "application/json",
+      "title": "Process description"
+    }
+  ]
+}

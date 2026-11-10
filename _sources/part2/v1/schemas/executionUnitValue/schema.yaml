@@ -1,0 +1,6 @@
+# Source of truth: OGC 20-044 draft, https://docs.ogc.org/DRAFTS/20-044.html
+oneOf:
+  - $ref: bblocks://ogc.api.processes.part2.v1.schemas.executionUnitBase
+  - type: array
+    items:
+      $ref: bblocks://ogc.api.processes.part2.v1.schemas.executionUnitBase

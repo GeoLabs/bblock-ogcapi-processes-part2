@@ -1,0 +1,43 @@
+# Based on OGC 20-044 draft; local discriminator composition prevents fallback bypasses.
+oneOf:
+  - allOf:
+      - $ref: bblocks://ogc.api.processes.part1.v1.schemas.link
+      - not:
+          required: [value]
+  - allOf:
+      - $ref: bblocks://ogc.api.processes.part2.v1.schemas.qualifiedExecutionUnitValue
+      - type: object
+        required: [value]
+        if:
+          required: [type]
+          properties:
+            type:
+              enum: [docker, oci]
+        then:
+          description: The execution unit is a container image.
+          properties:
+            value:
+              $ref: bblocks://ogc.api.processes.part2.v1.schemas.executionUnitContainer
+        else:
+          if:
+            required: [mediaType]
+            properties:
+              mediaType:
+                const: application/cwl
+          then:
+            description: The execution unit is CWL script.
+            properties:
+              value:
+                $ref: https://raw.githubusercontent.com/common-workflow-language/cwl-v1.2/main/json-schema/cwl.yaml
+          else:
+            description: |-
+              The execution unit is not Docker/OCI or CWL and cannot be properly described via
+              the "mediaType" property of a qualified value using an RFC 2046 media type (e.g.
+              an "R" or "Python" script). In this case a community-defined or custom token may
+              be used with the "type" property.
+            required: [type]
+            properties:
+              type:
+                type: string
+                not:
+                  enum: [docker, oci]

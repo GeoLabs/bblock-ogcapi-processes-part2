@@ -1,0 +1,8 @@
+- title: Output glob string
+  snippets:
+    - language: json
+      ref: tests/glob-string.json
+- title: Output glob array
+  snippets:
+    - language: json
+      ref: tests/glob-array.json

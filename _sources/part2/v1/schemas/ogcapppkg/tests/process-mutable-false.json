@@ -1,0 +1,4 @@
+{
+  "processDescription": {"process": {"id": "echo", "version": "1.0.0", "mutable": false}},
+  "executionUnit": {"type": "python", "value": {}}
+}

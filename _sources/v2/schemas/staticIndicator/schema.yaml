@@ -1,8 +1,0 @@
-allOf:
-  - $ref: bblocks://ogc.api.processes.v1.schemas.processSummary
-  - type: object
-    properties:
-      mutable:
-        type: boolean
-        default: true
-        description: Indicates whether the process can be modified via Deploy, Replace, Undeploy operations
